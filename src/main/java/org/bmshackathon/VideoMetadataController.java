@@ -20,13 +20,13 @@ public class VideoMetadataController {
     public VideoMetadataController(VideoMetadataRepository videoMetadataRepository) {
         this.videoMetadataRepository = videoMetadataRepository;
     }
-
-    @RequestMapping(value = "/videos/{videoUuid}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<VideoMetadata> findOne(@PathVariable Long videoUuid) {
-        return videoMetadataRepository.findOne(videoUuid)
-                .map(videoMetadata -> new ResponseEntity<>(videoMetadata, HttpStatus.OK))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
+//
+//    @RequestMapping(value = "/videos/{videoUuid}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+//    public ResponseEntity<VideoMetadata> findOne(@PathVariable Long videoUuid) {
+//        return videoMetadataRepository.findOne(videoUuid)
+//                .map(videoMetadata -> new ResponseEntity<>(videoMetadata, HttpStatus.OK))
+//                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+//    }
 
 //    nie umiem :<
 //    public HttpEntity<VideoMetadata> findAll() {
