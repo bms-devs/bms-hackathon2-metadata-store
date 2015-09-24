@@ -7,7 +7,7 @@ import java.util.Optional;
 //@RepositoryRestResource
 public interface VideoMetadataRepository extends Repository<VideoMetadata, Long> {
 
-    Optional<VideoMetadata> findOne(Long uuid);
+    Optional<VideoMetadata> findOne(Long id);
 
     Iterable<VideoMetadata> findAll();
 }

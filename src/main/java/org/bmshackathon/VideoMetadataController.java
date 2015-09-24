@@ -22,9 +22,9 @@ public class VideoMetadataController {
         this.videoMetadataRepository = videoMetadataRepository;
     }
 
-    @RequestMapping(value = "/videos/{videoUuid}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<VideoMetadata> findOne(@PathVariable Long videoUuid) {
-        return videoMetadataRepository.findOne(videoUuid)
+    @RequestMapping(value = "/videos/{videoId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<VideoMetadata> findOne(@PathVariable Long videoId) {
+        return videoMetadataRepository.findOne(videoId)
                 .map(videoMetadata -> new ResponseEntity<>(videoMetadata, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
